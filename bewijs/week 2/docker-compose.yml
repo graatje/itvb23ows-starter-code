@@ -33,13 +33,6 @@ services:
             - mysql_hive
         environment:
             MYSQL_HOST: mysql_hive:3306;root;root
-    
-    jenkins:
-        image: jenkins/jenkins:lts
-        privileged: true
-        user: root
-        ports:
-            - 8081:8080
 
 networks:
     database:

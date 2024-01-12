@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+    php:
+        build: ./app
+        ports:
+            - "8000:8000"
+        volumes:
+            - "./app/:/var/www/html/"
+        networks:
+            - database
+        depends_on:
+            - mysql_hive
+    mysql_hive:
+        image: mysql:5
+        volumes:
+            - dbdata_hive:/var/lib/mysql
+        networks:
+            - database
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: hive
+            MYSQL_ALLOW_EMPTY_PASSWORD: Yes
+            MYSQL_PASSWORD: 
+
+    phpmyadmin:
+        image: nazarpc/phpmyadmin
+        ports:
+            - "8080:80"
+        networks:
+            - database
+        depends_on:
+            - mysql_hive
+        environment:
+            MYSQL_HOST: mysql_hive:3306;root;root
+
+networks:
+    database:
+
+volumes:
+    dbdata_hive:
+

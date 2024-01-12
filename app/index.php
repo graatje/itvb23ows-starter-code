@@ -10,7 +10,7 @@
     $board = $_SESSION['board'];
     $player = $_SESSION['player'];
     $hand = $_SESSION['hand'];
-
+echo '<pre>';
     $to = [];
     foreach ($GLOBALS['OFFSETS'] as $pq) {
         foreach (array_keys($board) as $pos) {

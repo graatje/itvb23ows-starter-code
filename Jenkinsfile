@@ -6,10 +6,12 @@ pipeline {
                 echo 'Hello Worlds'
             }
         }
-        stage('SonarQube Analysis') {
-            def scannerHome = tool 'hive_sonarqube';
-            withSonarQubeEnv() {
-            sh "${scannerHome}/bin/sonar-scanner"
+        stage('SonarQubeScanner'){
+            steps{
+                script {scannerHome = tool 'hive_sonarqube'}
+                withSonarQubeEnv('SonarQube'){
+                    sh "${scannerHome}/bin/sonar-scanner"
+                }
             }
         }
     }

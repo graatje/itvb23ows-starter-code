@@ -8,7 +8,7 @@ pipeline {
         }
         stage('SonarQubeScanner'){
             steps{
-                script {scannerHome = tool 'SonarQube'}
+                script {scannerHome = tool 'hive_sonarqube'}
                 withSonarQubeEnv('SonarQube'){
                     sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=ows_kevin"
                 }

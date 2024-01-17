@@ -6,9 +6,6 @@ pipeline {
                 echo 'Hello Worlds'
             }
         }
-        stage('SCM') {
-            checkout scm
-        }
         stage('SonarQube Analysis') {
             def scannerHome = tool 'hive_sonarqube';
             withSonarQubeEnv() {

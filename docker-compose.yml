@@ -40,6 +40,13 @@ services:
         user: root
         ports:
             - 8081:8080
+    
+    sonarqube:
+        image: sonarqube:community
+        ports:
+            - 9000:9000
+        depends_on:
+            - mysql_hive
 
 networks:
     database:

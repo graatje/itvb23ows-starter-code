@@ -20,6 +20,11 @@
             if(isset($board[$a])) {
                 continue;
             }
+
+            if(count($board) > 1 && array_sum($hand) < 11 && !neighboursAreSameColor($player, $a, $board)) {
+                //dd(array($player, $a, $board));
+                continue;
+            }
     
             $to[] = $a;
         }

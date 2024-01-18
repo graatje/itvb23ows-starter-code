@@ -12,7 +12,7 @@ services:
         depends_on:
             - mysql_hive
     mysql_hive:
-        image: mysql:5
+        image: mysql:5.7
         volumes:
             - dbdata_hive:/var/lib/mysql
         networks:
@@ -22,6 +22,8 @@ services:
             MYSQL_DATABASE: hive
             MYSQL_ALLOW_EMPTY_PASSWORD: Yes
             MYSQL_PASSWORD: 
+        ports:
+            - "3306:3306"
 
     phpmyadmin:
         image: nazarpc/phpmyadmin

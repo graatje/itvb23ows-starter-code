@@ -44,4 +44,14 @@ function slide($board, $from, $to) {
     return min(len($board[$common[0]]), len($board[$common[1]])) <= max(len($board[$from]), len($board[$to]));
 }
 
+function otherPlayer($player) {
+    return $player == 0 ? 1 : 0;
+}
+
+function dd($x) {
+    echo "<pre>";
+    var_dump($x);
+    echo "</pre>";
+    die();
+}
 ?>

@@ -158,7 +158,13 @@
         <form method="post" action="move.php">
             <select name="from">
                 <?php
+                
                     foreach (array_keys($board) as $pos) {
+                        // Only pieces of the current player
+                        if($board[$pos][count($board[$pos])-1][0] != $player) {
+                            continue;
+                        }
+
                         echo "<option value=\"$pos\">$pos</option>";
                     }
                 ?>

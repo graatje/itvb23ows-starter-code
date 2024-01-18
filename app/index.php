@@ -12,9 +12,16 @@
     $hand = $_SESSION['hand'];
     $to = [];
     foreach ($GLOBALS['OFFSETS'] as $pq) {
-        foreach (array_keys($board) as $pos) {
+        foreach (array_keys($board) as $pos) {        
             $pq2 = explode(',', $pos);
-            $to[] = ($pq[0] + $pq2[0]).','.($pq[1] + $pq2[1]);
+
+            $a= ($pq[0] + $pq2[0]).','.($pq[1] + $pq2[1]);
+            // Check if not empty
+            if(isset($board[$a])) {
+                continue;
+            }
+    
+            $to[] = $a;
         }
     }
     $to = array_unique($to);
@@ -127,7 +134,10 @@
             <select name="piece">
                 <?php
                     foreach ($hand[$player] as $tile => $ct) {
-                        echo "<option value=\"$tile\">$tile</option>";
+                        // Check if there is one piece or more of those left
+                        if($ct > 0) {
+                            echo "<option value=\"$tile\">$tile</option>";
+                        }
                     }
                 ?>
             </select>

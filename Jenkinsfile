@@ -3,8 +3,8 @@ node {
     checkout scm
   }
   stage('SonarQube Analysis') {
-    def scannerHome = tool 'SonarQube';
-    withSonarQubeEnv(installationName: 'SonarQube') {
+    def scannerHome = tool 'SonarScanner';
+    withSonarQubeEnv() {
       sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=ows_kevin"
     }
   }

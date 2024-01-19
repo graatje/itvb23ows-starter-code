@@ -12,9 +12,21 @@
     $hand = $_SESSION['hand'];
     $to = [];
     foreach ($GLOBALS['OFFSETS'] as $pq) {
-        foreach (array_keys($board) as $pos) {
+        foreach (array_keys($board) as $pos) {        
             $pq2 = explode(',', $pos);
-            $to[] = ($pq[0] + $pq2[0]).','.($pq[1] + $pq2[1]);
+
+            $a= ($pq[0] + $pq2[0]).','.($pq[1] + $pq2[1]);
+            // Check if not empty
+            if(isset($board[$a])) {
+                continue;
+            }
+
+            if(count($board) > 1 && array_sum($hand) < 11 && !neighboursAreSameColor($player, $a, $board)) {
+                //dd(array($player, $a, $board));
+                continue;
+            }
+    
+            $to[] = $a;
         }
     }
     $to = array_unique($to);
@@ -127,7 +139,10 @@
             <select name="piece">
                 <?php
                     foreach ($hand[$player] as $tile => $ct) {
-                        echo "<option value=\"$tile\">$tile</option>";
+                        // Check if there is one piece or more of those left
+                        if($ct > 0) {
+                            echo "<option value=\"$tile\">$tile</option>";
+                        }
                     }
                 ?>
             </select>
@@ -143,7 +158,13 @@
         <form method="post" action="move.php">
             <select name="from">
                 <?php
+                
                     foreach (array_keys($board) as $pos) {
+                        // Only pieces of the current player
+                        if($board[$pos][count($board[$pos])-1][0] != $player) {
+                            continue;
+                        }
+
                         echo "<option value=\"$pos\">$pos</option>";
                     }
                 ?>

@@ -1,0 +1,3835 @@
+[
+    {
+      "key": "AY0g0RL14fvRlmq4REcT",
+      "rule": "php:S113",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/database.php",
+      "project": "kevin_ows",
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a new line at the end of this file.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RL14fvRlmq4REcP",
+      "rule": "php:S100",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/database.php",
+      "project": "kevin_ows",
+      "line": 3,
+      "hash": "6da0d61e2b13d79f83228024b0c50461",
+      "textRange": {
+        "startLine": 3,
+        "endLine": 3,
+        "startOffset": 9,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename function \"get_state\" to match the regular expression ^[a-z][a-zA-Z0-9]*$.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "IDENTIFIABLE",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RL14fvRlmq4REcQ",
+      "rule": "php:S100",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/database.php",
+      "project": "kevin_ows",
+      "line": 7,
+      "hash": "d9af2751d4319b0ab09febe1e2cacc97",
+      "textRange": {
+        "startLine": 7,
+        "endLine": 7,
+        "startOffset": 9,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename function \"set_state\" to match the regular expression ^[a-z][a-zA-Z0-9]*$.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "IDENTIFIABLE",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RL14fvRlmq4REcR",
+      "rule": "php:S2115",
+      "severity": "BLOCKER",
+      "component": "kevin_ows:app/database.php",
+      "project": "kevin_ows",
+      "line": 14,
+      "hash": "054e66f77415304a5ccc9dfaa32df188",
+      "textRange": {
+        "startLine": 14,
+        "endLine": 14,
+        "startOffset": 39,
+        "endOffset": 41
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add password protection to this database.",
+      "effort": "45min",
+      "debt": "45min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "cwe"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "VULNERABILITY",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "TRUSTWORTHY",
+      "cleanCodeAttributeCategory": "RESPONSIBLE",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RL14fvRlmq4REcS",
+      "rule": "php:S1780",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/database.php",
+      "project": "kevin_ows",
+      "line": 16,
+      "hash": "6ec256c8a7669df51b63aea2878825e2",
+      "textRange": {
+        "startLine": 16,
+        "endLine": 16,
+        "startOffset": 0,
+        "endOffset": 2
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this closing tag \"?>\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "bad-practice",
+        "per"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REb7",
+      "rule": "php:S4833",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 4,
+      "hash": "7d0d72da309b8143d655e83128f1b644",
+      "textRange": {
+        "startLine": 4,
+        "endLine": 4,
+        "startOffset": 4,
+        "endOffset": 16
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include_once\" with namespace import mechanism through the \"use\" keyword.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REb0",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 21,
+      "hash": "b7d30c360ac7863f5590df9f7792ef1e",
+      "textRange": {
+        "startLine": 21,
+        "endLine": 21,
+        "startOffset": 4,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REbw",
+      "rule": "Web:S5254",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 24,
+      "hash": "166248a6129a1e4370d20adc2d4c23f3",
+      "textRange": {
+        "startLine": 24,
+        "endLine": 24,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add \"lang\" and/or \"xml:lang\" attributes to this \"<html>\" element",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "accessibility",
+        "wcag2-a"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REb1",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 82,
+      "hash": "670ed04f69fe11b5b0d7903a61812b83",
+      "textRange": {
+        "startLine": 82,
+        "endLine": 82,
+        "startOffset": 20,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REb2",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 83,
+      "hash": "058027665af2b062331572b446d53eaa",
+      "textRange": {
+        "startLine": 83,
+        "endLine": 83,
+        "startOffset": 20,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REb3",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 92,
+      "hash": "7e2f442387554dcf978185cc64cd91eb",
+      "textRange": {
+        "startLine": 92,
+        "endLine": 92,
+        "startOffset": 20,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REb4",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 124,
+      "hash": "290c9d3e96e86c967ff12bee189b66f0",
+      "textRange": {
+        "startLine": 124,
+        "endLine": 124,
+        "startOffset": 56,
+        "endOffset": 60
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REb5",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 124,
+      "hash": "290c9d3e96e86c967ff12bee189b66f0",
+      "textRange": {
+        "startLine": 124,
+        "endLine": 124,
+        "startOffset": 24,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REb6",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 166,
+      "hash": "690048cc167d3882a51ce75cf067ba7d",
+      "textRange": {
+        "startLine": 166,
+        "endLine": 166,
+        "startOffset": 22,
+        "endOffset": 24
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REbz",
+      "rule": "php:S6600",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 166,
+      "hash": "690048cc167d3882a51ce75cf067ba7d",
+      "textRange": {
+        "startLine": 166,
+        "endLine": 166,
+        "startOffset": 53,
+        "endOffset": 77
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the parentheses from this \"echo\" call.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REbx",
+      "rule": "php:S2681",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 166,
+      "hash": "690048cc167d3882a51ce75cf067ba7d",
+      "textRange": {
+        "startLine": 166,
+        "endLine": 166,
+        "startOffset": 79,
+        "endOffset": 105
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "kevin_ows:app/index.php",
+              "textRange": {
+                "startLine": 166,
+                "endLine": 166,
+                "startOffset": 53,
+                "endOffset": 78
+              },
+              "msg": "Executed conditionally",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "This statement will not be executed conditionally; only the first statement of this 2-statement block will be. The rest will execute unconditionally.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "cwe"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "FORMATTED",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REb8",
+      "rule": "php:S4833",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 169,
+      "hash": "954d1ba62f1f12dbf9386c1093b53e8f",
+      "textRange": {
+        "startLine": 169,
+        "endLine": 169,
+        "startOffset": 22,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include\" with namespace import mechanism through the \"use\" keyword.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLK4fvRlmq4REby",
+      "rule": "php:S2003",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/index.php",
+      "project": "kevin_ows",
+      "line": 169,
+      "hash": "954d1ba62f1f12dbf9386c1093b53e8f",
+      "textRange": {
+        "startLine": 169,
+        "endLine": 169,
+        "startOffset": 22,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include\" with \"include_once\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbS",
+      "rule": "php:S113",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a new line at the end of this file.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbf",
+      "rule": "php:S4833",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 5,
+      "hash": "7d0d72da309b8143d655e83128f1b644",
+      "textRange": {
+        "startLine": 5,
+        "endLine": 5,
+        "startOffset": 0,
+        "endOffset": 12
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include_once\" with namespace import mechanism through the \"use\" keyword.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbe",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 15,
+      "hash": "4e983a70fc4348d1bb100eddc3ea6ff1",
+      "textRange": {
+        "startLine": 15,
+        "endLine": 15,
+        "startOffset": 0,
+        "endOffset": 2
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbU",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 17,
+      "hash": "e793689f7df96077897ea873f7528430",
+      "textRange": {
+        "startLine": 17,
+        "endLine": 17,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbV",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 19,
+      "hash": "ec84046eb9f791651f259e89a40f767b",
+      "textRange": {
+        "startLine": 19,
+        "endLine": 19,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbZ",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 23,
+      "hash": "0c4fb5fe805ec3edfde475cecfdf7f9f",
+      "textRange": {
+        "startLine": 23,
+        "endLine": 23,
+        "startOffset": 4,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbY",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 43,
+      "hash": "7c0c0a4f99b50b0af33e54b8406a9455",
+      "textRange": {
+        "startLine": 43,
+        "endLine": 43,
+        "startOffset": 12,
+        "endOffset": 14
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbW",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 44,
+      "hash": "ee725e4b4b1754d4bf107401199df302",
+      "textRange": {
+        "startLine": 44,
+        "endLine": 44,
+        "startOffset": 12,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbX",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 46,
+      "hash": "b2c96b5392acec5c624ce5f9f994fd12",
+      "textRange": {
+        "startLine": 46,
+        "endLine": 46,
+        "startOffset": 16,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbb",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 52,
+      "hash": "fc76892351edea62acef04247c0eab2d",
+      "textRange": {
+        "startLine": 52,
+        "endLine": 52,
+        "startOffset": 8,
+        "endOffset": 10
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REba",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 53,
+      "hash": "0da57a304c8352e7860a15e851711f6e",
+      "textRange": {
+        "startLine": 53,
+        "endLine": 53,
+        "startOffset": 8,
+        "endOffset": 12
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbd",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 55,
+      "hash": "a6ce5e80c5cfc26aa504c41c7f57457f",
+      "textRange": {
+        "startLine": 55,
+        "endLine": 55,
+        "startOffset": 8,
+        "endOffset": 10
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbc",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 56,
+      "hash": "a4dfb8e30c10de271576532b635be4dc",
+      "textRange": {
+        "startLine": 56,
+        "endLine": 56,
+        "startOffset": 8,
+        "endOffset": 12
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbg",
+      "rule": "php:S4833",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 58,
+      "hash": "954d1ba62f1f12dbf9386c1093b53e8f",
+      "textRange": {
+        "startLine": 58,
+        "endLine": 58,
+        "startOffset": 14,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include\" with namespace import mechanism through the \"use\" keyword.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbT",
+      "rule": "php:S2003",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 58,
+      "hash": "954d1ba62f1f12dbf9386c1093b53e8f",
+      "textRange": {
+        "startLine": 58,
+        "endLine": 58,
+        "startOffset": 14,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include\" with \"include_once\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbQ",
+      "rule": "php:S103",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 59,
+      "hash": "4d458700d54865490daede5085281519",
+      "textRange": {
+        "startLine": 59,
+        "endLine": 59,
+        "startOffset": 0,
+        "endOffset": 137
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Split this 137 characters long line (which is greater than 120 authorized).",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "FORMATTED",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKd4fvRlmq4REbR",
+      "rule": "php:S1780",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/move.php",
+      "project": "kevin_ows",
+      "line": 69,
+      "hash": "6ec256c8a7669df51b63aea2878825e2",
+      "textRange": {
+        "startLine": 69,
+        "endLine": 69,
+        "startOffset": 0,
+        "endOffset": 2
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this closing tag \"?>\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "bad-practice",
+        "per"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKr4fvRlmq4REbj",
+      "rule": "php:S113",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/pass.php",
+      "project": "kevin_ows",
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a new line at the end of this file.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKr4fvRlmq4REbl",
+      "rule": "php:S4833",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/pass.php",
+      "project": "kevin_ows",
+      "line": 5,
+      "hash": "954d1ba62f1f12dbf9386c1093b53e8f",
+      "textRange": {
+        "startLine": 5,
+        "endLine": 5,
+        "startOffset": 6,
+        "endOffset": 13
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include\" with namespace import mechanism through the \"use\" keyword.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKr4fvRlmq4REbk",
+      "rule": "php:S2003",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/pass.php",
+      "project": "kevin_ows",
+      "line": 5,
+      "hash": "954d1ba62f1f12dbf9386c1093b53e8f",
+      "textRange": {
+        "startLine": 5,
+        "endLine": 5,
+        "startOffset": 6,
+        "endOffset": 13
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include\" with \"include_once\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKr4fvRlmq4REbh",
+      "rule": "php:S103",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/pass.php",
+      "project": "kevin_ows",
+      "line": 6,
+      "hash": "901ac04dd3e03a9e8011b9e7b2601472",
+      "textRange": {
+        "startLine": 6,
+        "endLine": 6,
+        "startOffset": 0,
+        "endOffset": 135
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Split this 135 characters long line (which is greater than 120 authorized).",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "FORMATTED",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RKr4fvRlmq4REbi",
+      "rule": "php:S1780",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/pass.php",
+      "project": "kevin_ows",
+      "line": 14,
+      "hash": "6ec256c8a7669df51b63aea2878825e2",
+      "textRange": {
+        "startLine": 14,
+        "endLine": 14,
+        "startOffset": 0,
+        "endOffset": 2
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this closing tag \"?>\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "bad-practice",
+        "per"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RK24fvRlmq4REbo",
+      "rule": "php:S113",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/play.php",
+      "project": "kevin_ows",
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a new line at the end of this file.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RK24fvRlmq4REbu",
+      "rule": "php:S4833",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/play.php",
+      "project": "kevin_ows",
+      "line": 5,
+      "hash": "7d0d72da309b8143d655e83128f1b644",
+      "textRange": {
+        "startLine": 5,
+        "endLine": 5,
+        "startOffset": 0,
+        "endOffset": 12
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include_once\" with namespace import mechanism through the \"use\" keyword.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RK24fvRlmq4REbt",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/play.php",
+      "project": "kevin_ows",
+      "line": 14,
+      "hash": "f8824cc0ffd638ee4bcf32fe39b576ba",
+      "textRange": {
+        "startLine": 14,
+        "endLine": 14,
+        "startOffset": 0,
+        "endOffset": 2
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RK24fvRlmq4REbq",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/play.php",
+      "project": "kevin_ows",
+      "line": 16,
+      "hash": "7a324ce19ee2eb10a9401b3aaf299302",
+      "textRange": {
+        "startLine": 16,
+        "endLine": 16,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RK24fvRlmq4REbr",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/play.php",
+      "project": "kevin_ows",
+      "line": 18,
+      "hash": "14110071b8bb93515a2694871fcfe26d",
+      "textRange": {
+        "startLine": 18,
+        "endLine": 18,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RK24fvRlmq4REbs",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/play.php",
+      "project": "kevin_ows",
+      "line": 20,
+      "hash": "7e0ee45b08678655a2976958c72895dc",
+      "textRange": {
+        "startLine": 20,
+        "endLine": 20,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RK24fvRlmq4REbv",
+      "rule": "php:S4833",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/play.php",
+      "project": "kevin_ows",
+      "line": 28,
+      "hash": "954d1ba62f1f12dbf9386c1093b53e8f",
+      "textRange": {
+        "startLine": 28,
+        "endLine": 28,
+        "startOffset": 10,
+        "endOffset": 17
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include\" with namespace import mechanism through the \"use\" keyword.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RK24fvRlmq4REbp",
+      "rule": "php:S2003",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/play.php",
+      "project": "kevin_ows",
+      "line": 28,
+      "hash": "954d1ba62f1f12dbf9386c1093b53e8f",
+      "textRange": {
+        "startLine": 28,
+        "endLine": 28,
+        "startOffset": 10,
+        "endOffset": 17
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include\" with \"include_once\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RK24fvRlmq4REbm",
+      "rule": "php:S103",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/play.php",
+      "project": "kevin_ows",
+      "line": 29,
+      "hash": "4ab0bad57978904812072e1ef36b4f14",
+      "textRange": {
+        "startLine": 29,
+        "endLine": 29,
+        "startOffset": 0,
+        "endOffset": 133
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Split this 133 characters long line (which is greater than 120 authorized).",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "FORMATTED",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RK24fvRlmq4REbn",
+      "rule": "php:S1780",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/play.php",
+      "project": "kevin_ows",
+      "line": 37,
+      "hash": "6ec256c8a7669df51b63aea2878825e2",
+      "textRange": {
+        "startLine": 37,
+        "endLine": 37,
+        "startOffset": 0,
+        "endOffset": 2
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this closing tag \"?>\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "bad-practice",
+        "per"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLX4fvRlmq4REb_",
+      "rule": "php:S113",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/restart.php",
+      "project": "kevin_ows",
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a new line at the end of this file.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLX4fvRlmq4REb9",
+      "rule": "php:S103",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/restart.php",
+      "project": "kevin_ows",
+      "line": 6,
+      "hash": "2a04160133fc78e31d30ae5e7f4396f2",
+      "textRange": {
+        "startLine": 6,
+        "endLine": 6,
+        "startOffset": 0,
+        "endOffset": 135
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Split this 135 characters long line (which is greater than 120 authorized).",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "FORMATTED",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLX4fvRlmq4REcA",
+      "rule": "php:S4833",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/restart.php",
+      "project": "kevin_ows",
+      "line": 9,
+      "hash": "70a2e5e14cc84e7ec9d5f7fd033f3233",
+      "textRange": {
+        "startLine": 9,
+        "endLine": 9,
+        "startOffset": 6,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include_once\" with namespace import mechanism through the \"use\" keyword.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLX4fvRlmq4REb-",
+      "rule": "php:S1780",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/restart.php",
+      "project": "kevin_ows",
+      "line": 15,
+      "hash": "6ec256c8a7669df51b63aea2878825e2",
+      "textRange": {
+        "startLine": 15,
+        "endLine": 15,
+        "startOffset": 0,
+        "endOffset": 2
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this closing tag \"?>\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "bad-practice",
+        "per"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RJo4fvRlmq4REbP",
+      "rule": "php:S4833",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/undo.php",
+      "project": "kevin_ows",
+      "line": 5,
+      "hash": "954d1ba62f1f12dbf9386c1093b53e8f",
+      "textRange": {
+        "startLine": 5,
+        "endLine": 5,
+        "startOffset": 6,
+        "endOffset": 13
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include\" with namespace import mechanism through the \"use\" keyword.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RJo4fvRlmq4REbO",
+      "rule": "php:S2003",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/undo.php",
+      "project": "kevin_ows",
+      "line": 5,
+      "hash": "954d1ba62f1f12dbf9386c1093b53e8f",
+      "textRange": {
+        "startLine": 5,
+        "endLine": 5,
+        "startOffset": 6,
+        "endOffset": 13
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace \"include\" with \"include_once\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "BUG",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RJo4fvRlmq4REbN",
+      "rule": "php:S1780",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/undo.php",
+      "project": "kevin_ows",
+      "line": 13,
+      "hash": "6ec256c8a7669df51b63aea2878825e2",
+      "textRange": {
+        "startLine": 13,
+        "endLine": 14,
+        "startOffset": 0,
+        "endOffset": 0
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this closing tag \"?>\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "bad-practice",
+        "per"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcE",
+      "rule": "php:S113",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a new line at the end of this file.",
+      "effort": "1min",
+      "debt": "1min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "convention"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcB",
+      "rule": "php:S1142",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 5,
+      "hash": "e50d3e986862013806bfc24ccd904208",
+      "textRange": {
+        "startLine": 5,
+        "endLine": 5,
+        "startOffset": 9,
+        "endOffset": 20
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "kevin_ows:app/util.php",
+              "textRange": {
+                "startLine": 11,
+                "endLine": 11,
+                "startOffset": 4,
+                "endOffset": 10
+              },
+              "msg": "\"return\" statement.",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "kevin_ows:app/util.php",
+              "textRange": {
+                "startLine": 10,
+                "endLine": 10,
+                "startOffset": 40,
+                "endOffset": 46
+              },
+              "msg": "\"return\" statement.",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "kevin_ows:app/util.php",
+              "textRange": {
+                "startLine": 9,
+                "endLine": 9,
+                "startOffset": 51,
+                "endOffset": 57
+              },
+              "msg": "\"return\" statement.",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "kevin_ows:app/util.php",
+              "textRange": {
+                "startLine": 8,
+                "endLine": 8,
+                "startOffset": 51,
+                "endOffset": 57
+              },
+              "msg": "\"return\" statement.",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "This function has 4 returns, which is more than the 3 allowed.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "brain-overload"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcF",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 8,
+      "hash": "e1d98cba8572ffaae87635f61c8359fe",
+      "textRange": {
+        "startLine": 8,
+        "endLine": 8,
+        "startOffset": 4,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcG",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 9,
+      "hash": "dd98d489613eeddebe20f38a6bdcf0af",
+      "textRange": {
+        "startLine": 9,
+        "endLine": 9,
+        "startOffset": 4,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcH",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 10,
+      "hash": "32ed66cc01630e3e018e78086986d831",
+      "textRange": {
+        "startLine": 10,
+        "endLine": 10,
+        "startOffset": 4,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcI",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 16,
+      "hash": "2464e7df069d7ee68e7c192b4fd5537e",
+      "textRange": {
+        "startLine": 16,
+        "endLine": 16,
+        "startOffset": 8,
+        "endOffset": 10
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcJ",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 22,
+      "hash": "cc374f85a74a5be9534a2bf9c33cfeaf",
+      "textRange": {
+        "startLine": 22,
+        "endLine": 22,
+        "startOffset": 8,
+        "endOffset": 10
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcK",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 24,
+      "hash": "d4973cffd086d99534067d13cf34efdc",
+      "textRange": {
+        "startLine": 24,
+        "endLine": 24,
+        "startOffset": 8,
+        "endOffset": 10
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcC",
+      "rule": "php:S1142",
+      "severity": "MAJOR",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 33,
+      "hash": "299b8c03298a83ee0f5163ba4143f23c",
+      "textRange": {
+        "startLine": 33,
+        "endLine": 33,
+        "startOffset": 9,
+        "endOffset": 14
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "kevin_ows:app/util.php",
+              "textRange": {
+                "startLine": 44,
+                "endLine": 44,
+                "startOffset": 4,
+                "endOffset": 10
+              },
+              "msg": "\"return\" statement.",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "kevin_ows:app/util.php",
+              "textRange": {
+                "startLine": 43,
+                "endLine": 43,
+                "startOffset": 86,
+                "endOffset": 92
+              },
+              "msg": "\"return\" statement.",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "kevin_ows:app/util.php",
+              "textRange": {
+                "startLine": 35,
+                "endLine": 35,
+                "startOffset": 34,
+                "endOffset": 40
+              },
+              "msg": "\"return\" statement.",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "kevin_ows:app/util.php",
+              "textRange": {
+                "startLine": 34,
+                "endLine": 34,
+                "startOffset": 36,
+                "endOffset": 42
+              },
+              "msg": "\"return\" statement.",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "This function has 4 returns, which is more than the 3 allowed.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "brain-overload"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcL",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 34,
+      "hash": "a94b6711a756a3d0d93d7a402db066f5",
+      "textRange": {
+        "startLine": 34,
+        "endLine": 34,
+        "startOffset": 4,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcM",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 35,
+      "hash": "833ee39495f02d4c796676cab5ea860d",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 4,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcN",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 41,
+      "hash": "392f178b9a59e6ca5f9192e400b2308c",
+      "textRange": {
+        "startLine": 41,
+        "endLine": 41,
+        "startOffset": 8,
+        "endOffset": 10
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcO",
+      "rule": "php:S121",
+      "severity": "CRITICAL",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 43,
+      "hash": "fe831ce26d595f45251d84bbce5f46b5",
+      "textRange": {
+        "startLine": 43,
+        "endLine": 43,
+        "startOffset": 4,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add curly braces around the nested statement(s).",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "pitfall"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ]
+    },
+    {
+      "key": "AY0g0RLk4fvRlmq4REcD",
+      "rule": "php:S1780",
+      "severity": "MINOR",
+      "component": "kevin_ows:app/util.php",
+      "project": "kevin_ows",
+      "line": 47,
+      "hash": "6ec256c8a7669df51b63aea2878825e2",
+      "textRange": {
+        "startLine": 47,
+        "endLine": 47,
+        "startOffset": 0,
+        "endOffset": 2
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this closing tag \"?>\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "ralf@ralfvandenbroek.nl",
+      "tags": [
+        "bad-practice",
+        "per"
+      ],
+      "transitions": [
+        "confirm",
+        "resolve",
+        "falsepositive",
+        "wontfix"
+      ],
+      "actions": [
+        "set_type",
+        "set_tags",
+        "comment",
+        "set_severity",
+        "assign"
+      ],
+      "comments": [],
+      "creationDate": "2023-10-06T11:13:48+0000",
+      "updateDate": "2024-01-19T08:22:47+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ]
+    }
+  ]

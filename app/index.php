@@ -1,36 +1,11 @@
 <?php
+    include 'main/Game.php';
+    include 'main/DatabaseHandler.php';
+
     session_start();
-
-    include_once 'util.php';
-
-    if (!isset($_SESSION['board'])) {
-        header('Location: restart.php');
-        exit(0);
-    }
-    $board = $_SESSION['board'];
-    $player = $_SESSION['player'];
-    $hand = $_SESSION['hand'];
-    $to = [];
-    foreach ($GLOBALS['OFFSETS'] as $pq) {
-        foreach (array_keys($board) as $pos) {        
-            $pq2 = explode(',', $pos);
-
-            $a= ($pq[0] + $pq2[0]).','.($pq[1] + $pq2[1]);
-            // Check if not empty
-            if(isset($board[$a])) {
-                continue;
-            }
-
-            if(count($board) > 1 && array_sum($hand) < 11 && !neighboursAreSameColor($player, $a, $board)) {
-                //dd(array($player, $a, $board));
-                continue;
-            }
+    $game = new Game($dbHandler);
+    $dbHandler = new DatabaseHandler();
     
-            $to[] = $a;
-        }
-    }
-    $to = array_unique($to);
-    if (!count($to)) $to[] = '0,0';
 ?>
 <!DOCTYPE html>
 <html>
@@ -89,12 +64,12 @@
             <?php
                 $min_p = 1000;
                 $min_q = 1000;
-                foreach ($board as $pos => $tile) {
+                foreach ($game->board as $pos => $tile) {
                     $pq = explode(',', $pos);
                     if ($pq[0] < $min_p) $min_p = $pq[0];
                     if ($pq[1] < $min_q) $min_q = $pq[1];
                 }
-                foreach (array_filter($board) as $pos => $tile) {
+                foreach (array_filter($game->board) as $pos => $tile) {
                     $pq = explode(',', $pos);
                     $pq[0];
                     $pq[1];
@@ -115,7 +90,7 @@
         <div class="hand">
             White:
             <?php
-                foreach ($hand[0] as $tile => $ct) {
+                foreach ($_SESSION['hand'][0] as $tile => $ct) {
                     for ($i = 0; $i < $ct; $i++) {
                         echo '<div class="tile player0"><span>'.$tile."</span></div> ";
                     }
@@ -125,7 +100,7 @@
         <div class="hand">
             Black:
             <?php
-            foreach ($hand[1] as $tile => $ct) {
+            foreach ($_SESSION['hand'][1] as $tile => $ct) {
                 for ($i = 0; $i < $ct; $i++) {
                     echo '<div class="tile player1"><span>'.$tile."</span></div> ";
                 }
@@ -133,12 +108,12 @@
             ?>
         </div>
         <div class="turn">
-            Turn: <?php if ($player == 0) echo "White"; else echo "Black"; ?>
+            Turn: <?php if ($game->player == 0) echo "White"; else echo "Black"; ?>
         </div>
-        <form method="post" action="play.php">
+        <form method="post">
             <select name="piece">
                 <?php
-                    foreach ($hand[$player] as $tile => $ct) {
+                    foreach ($game->hand[$game->player] as $tile => $ct) {
                         // Check if there is one piece or more of those left
                         if($ct > 0) {
                             echo "<option value=\"$tile\">$tile</option>";
@@ -148,35 +123,31 @@
             </select>
             <select name="to">
                 <?php
-                    foreach ($to as $pos) {
+                    foreach ($game->getPossibleAddPositions() as $pos) {
                         echo "<option value=\"$pos\">$pos</option>";
                     }
                 ?>
             </select>
-            <input type="submit" value="Play">
+            <input type="submit" name="action" value="Play">
         </form>
-        <form method="post" action="move.php">
+        <form method="post">
             <select name="from">
                 <?php
-                
-                    foreach (array_keys($board) as $pos) {
-                        // Only pieces of the current player
-                        if($board[$pos][count($board[$pos])-1][0] != $player) {
-                            continue;
-                        }
+                    // Get all keys from the inner arrays
+                    foreach (array_keys(array_merge(...$game->getPossibleMovePositions())) as $from) {
 
-                        echo "<option value=\"$pos\">$pos</option>";
+                        echo "<option value=\"$from\">$from</option>";
                     }
                 ?>
             </select>
             <select name="to">
                 <?php
-                    foreach ($to as $pos) {
-                        echo "<option value=\"$pos\">$pos</option>";
+                    foreach (array_unique(array_values(array_merge(...$game->getPossibleMovePositions()))) as $to) {
+                        echo "<option value=\"$to\">$to</option>";
                     }
                 ?>
             </select>
-            <input type="submit" value="Move">
+            <input type="submit" name="action" value="Move">
         </form>
         <form method="post" action="pass.php">
             <input type="submit" value="Pass">
@@ -187,11 +158,10 @@
         <strong><?php if (isset($_SESSION['error'])) echo($_SESSION['error']); unset($_SESSION['error']); ?></strong>
         <ol>
             <?php
-                $db = include 'database.php';
-                $stmt = $db->prepare('SELECT * FROM moves WHERE game_id = '.$_SESSION['game_id']);
-                $stmt->execute();
-                $result = $stmt->get_result();
-                while ($row = $result->fetch_array()) {
+                $results = $dbHandler->getMoves($game->gameId);
+                // var_dump($results);
+               // die();
+                foreach ($results as $row){
                     echo '<li>'.$row[2].' '.$row[3].' '.$row[4].'</li>';
                 }
             ?>

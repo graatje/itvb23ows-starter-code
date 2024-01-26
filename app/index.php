@@ -5,6 +5,8 @@
     session_start();
     $dbHandler = new DatabaseHandler();
     $game = new Game($dbHandler);
+
+    $game->handleAction();
     
 ?>
 <!DOCTYPE html>
@@ -64,6 +66,8 @@
             <?php
                 $min_p = 1000;
                 $min_q = 1000;
+                //var_dump($game->board);
+                //var_dump($game->getPossibleAddPositions());
                 foreach ($game->board as $pos => $tile) {
                     $pq = explode(',', $pos);
                     if ($pq[0] < $min_p) $min_p = $pq[0];

@@ -21,12 +21,16 @@ class Game {
     public function __construct($databaseHandler) {
 
         $this->databaseHandler = $databaseHandler;
-
+        
         if (!isset($_SESSION['game_id']) || !isset($_SESSION['board']) || !isset($_SESSION['hand']) || !isset($_SESSION['player'])) {
+
+            //var_dump($_SESSION['board']);
+          //  die();
             $this->reset();
         }
 
         $this->gameId = $_SESSION['game_id'];
+        //var_dump($_SESSION['board']);
         $this->board = $_SESSION['board'];
         $this->player = $_SESSION['player'];
         $this->hand = $_SESSION['hand'];
@@ -56,14 +60,24 @@ class Game {
     }
 
     public function addPiece($piece, $position) {
+        // Check if the player has the piece
+        if (!isset($this->hand[$this->player][$piece]) || $this->hand[$this->player][$piece] == 0) {
+            $_SESSION['error'] = "You don't have that piece";
+            return;
+        }
         // Check if it is in possible add positions
+        if (!in_array($position, $this->getPossibleAddPositions())) {
+            $_SESSION['error'] = "Invalid position";
+            return;
+        }
 
         $this->board[$position] = [[$this->player, $piece]];
-        $this->hand[$player][$piece]--;
+        $this->hand[$this->player][$piece]--;
         $this->swapPlayer();
         
 
         $_SESSION['last_move'] = $db->insert_id;
+        $this->reload();
     }
 
     public function movePiece($fromPosition, $toPosition) {
@@ -73,12 +87,10 @@ class Game {
     public function getPossibleAddPositions() {
         $possiblePositions = [];
 
+        //var_dump($this->board);
         foreach ($this->board as $position => $piece) {
-            if ($piece[0] != $this->player) {
-                continue;
-            }
 
-            $position = explode(',', $position[1]);
+            $position = explode(',', $position);
 
             foreach ($GLOBALS['OFFSETS'] as $offset) {
                 $newPosition = ($position[0] + $offset[0]).','.($position[1] + $offset[1]);
@@ -90,11 +102,11 @@ class Game {
                 array_push($possiblePositions, $newPosition);
             }
         }
-        
-        if($possiblePositions == []) {
+
+        if(empty($possiblePositions)) {
             $possiblePositions = ['0,0'];
         }
-        return $possiblePositions;
+        return array_unique($possiblePositions);
     }
 
     public function getPossibleMovePositions() {

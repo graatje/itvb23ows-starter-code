@@ -3,8 +3,8 @@
     include 'main/DatabaseHandler.php';
 
     session_start();
-    $game = new Game($dbHandler);
     $dbHandler = new DatabaseHandler();
+    $game = new Game($dbHandler);
     
 ?>
 <!DOCTYPE html>
@@ -152,7 +152,7 @@
         <form method="post" action="pass.php">
             <input type="submit" value="Pass">
         </form>
-        <form method="post" action="restart.php">
+        <form method="post">
             <input type="submit" value="Restart">
         </form>
         <strong><?php if (isset($_SESSION['error'])) echo($_SESSION['error']); unset($_SESSION['error']); ?></strong>

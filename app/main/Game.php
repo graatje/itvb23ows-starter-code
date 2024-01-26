@@ -19,12 +19,17 @@ class Game {
 
 
     public function __construct($databaseHandler) {
+
         $this->databaseHandler = $databaseHandler;
+
+        if (!isset($_SESSION['game_id']) || !isset($_SESSION['board']) || !isset($_SESSION['hand']) || !isset($_SESSION['player'])) {
+            $this->reset();
+        }
 
         $this->gameId = $_SESSION['game_id'];
         $this->board = $_SESSION['board'];
         $this->player = $_SESSION['player'];
-        $this->hand = $_SESSION['hand'][$this->player];
+        $this->hand = $_SESSION['hand'];
         $this->lastMoveId = $_SESSION['last_move'];
 
     }
@@ -86,6 +91,9 @@ class Game {
             }
         }
         
+        if($possiblePositions == []) {
+            $possiblePositions = ['0,0'];
+        }
         return $possiblePositions;
     }
 
@@ -116,13 +124,26 @@ class Game {
     public function swapPlayer() {
         $this->player = 1 - $this->player;
     }
-    
+
+    public function reset() {
+        $this->board = [];
+        $this->hand = [0 => ["Q" => 1, "B" => 2, "S" => 2, "A" => 3, "G" => 3],
+                       1 => ["Q" => 1, "B" => 2, "S" => 2, "A" => 3, "G" => 3]
+        ];
+        $this->player = 0;
+        $this->lastMoveId = -1;
+
+        $this->gameId = $this->databaseHandler->reset();
+
+        $this->reload();
+    }
+
     public function reload() {
         // Set all session variables
         $_SESSION['game_id'] = $this->gameId;
         $_SESSION['board'] = $this->board;
         $_SESSION['player'] = $this->player;
-        $_SESSION['hand'][$this->player] = $this->hand;
+        $_SESSION['hand'] = $this->hand;
         $_SESSION['last_move'] = $this->lastMoveId;
 
         header('Location: index.php');

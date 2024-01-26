@@ -34,7 +34,13 @@ class DatabaseHandler {
         
         $result = $query->get_result();
 
-        return $result->fetch_array();
+        return $result->fetch_all();
+    }
+
+    public function reset() {
+        $db = $this->getConn();
+        $db->prepare('INSERT INTO games VALUES ()')->execute();
+        return $db->insert_id;
     }
 
     public function getConn() {

@@ -9,16 +9,22 @@ use PHPUnit\Framework\TestCase;
 
 final class Gamelogic extends TestCase {
     public function testValidMoves(): void {
-        ob_start();
-        
         $dbHandler = new DatabaseHandler();
         $g = new Game($dbHandler);
         
         $this->assertEquals($g->getPossibleAddPositions(), ['0,0']);
+        $this->assertEquals($g->hand, [0 => ["Q" => 1, "B" => 2, "S" => 2, "A" => 3, "G" => 3],
+                                       1 => ["Q" => 1, "B" => 2, "S" => 2, "A" => 3, "G" => 3]
+                                    ]
+        );
 
         $g->addPiece('Q', '0,0');
 
         $this->assertEquals($g->getPossibleAddPositions(), ['0,1', '0,-1','1,0', '-1,0', '-1,1', '1,-1']);
+        $this->assertEquals($g->hand, [0 => ["Q" => 0, "B" => 2, "S" => 2, "A" => 3, "G" => 3],
+                                       1 => ["Q" => 1, "B" => 2, "S" => 2, "A" => 3, "G" => 3]
+                                    ]
+        );
 
         $g->addPiece('Q', '0,1');
 
@@ -27,7 +33,13 @@ final class Gamelogic extends TestCase {
         $g->addPiece('B', '-1,0');
 
         $this->assertEquals($g->getPossibleAddPositions(), ['0,2', '1,1', '-1,2']);
+    }
 
+    protected function setUp(): void{
+        ob_start();
+    }
+
+    protected function tearDown(): void{
         ob_end_clean();
     }
 }

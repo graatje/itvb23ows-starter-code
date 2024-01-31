@@ -3,13 +3,13 @@
 class DatabaseHandler {
     private $conn;
 
-    public function addPiece($gameId, $piece, $position, $stateString, $lastMoveId) {
+    public function addPiece($gameId, $piece, $position, $game, $lastMoveId) {
         $db = $this->getConn();
 
         $query = $db->prepare('insert into moves (game_id, type, move_from, move_to, previous_id, state) values (?, "play", ?, ?, ?, ?)');
 
         // Integer string string integer string
-        $query->bind_param('issis', $gameId, $piece, $position, $lastMoveId, $stateString);
+        $query->bind_param('issis', $gameId, $piece, $position, $lastMoveId, $game->serialize());
         $query->execute();
 
         return $db->insert_id;

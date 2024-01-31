@@ -76,7 +76,9 @@ class Game {
         $this->board[$position] = [[$this->player, $piece]];
         $this->hand[$this->player][$piece]--;
         $this->swapPlayer();
-        
+
+        $db = $this->databaseHandler->addPiece($this->gameId, $piece, $position, $this, $this->lastMoveId);
+
         $this->moveCount += 1;
         $_SESSION['last_move'] = $db->insert_id;
         $this->reload();
@@ -196,5 +198,9 @@ class Game {
         $_SESSION['move_count'] = $this->moveCount;
 
         header('Location: index.php');
+    }
+
+    public function serialize() {
+        return serialize([$this->hand, $this->board, $this->player]);
     }
 }

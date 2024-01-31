@@ -5,7 +5,7 @@
     session_start();
     $dbHandler = new DatabaseHandler();
     $game = new Game($dbHandler);
-
+   // echo 'alert('.$game->gameId.')';
     $game->handleAction();
     
 ?>
@@ -163,7 +163,7 @@
         <ol>
             <?php
                 $results = $dbHandler->getMoves($game->gameId);
-                // var_dump($results);
+               //  var_dump($results);
                // die();
                 foreach ($results as $row){
                     echo '<li>'.$row[2].' '.$row[3].' '.$row[4].'</li>';

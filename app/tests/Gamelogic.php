@@ -1,19 +1,19 @@
-<?php 
+<?php
+ob_start();
+
+session_start();
+include 'main/Game.php';
+include 'main/DatabaseHandler.php';
 
 use PHPUnit\Framework\TestCase;
 
 final class Gamelogic extends TestCase
 {
-    public function testPushAndPop(): void
+    public function testValidMoves(): void
     {
-        $stack = [];
-        $this->assertSame(0, count($stack));
-
-        array_push($stack, 'foo');
-        $this->assertSame('foo', $stack[count($stack)-1]);
-        $this->assertSame(1, count($stack));
-
-        $this->assertSame('foo', array_pop($stack));
-        $this->assertSame(0, count($stack));
+        
+        $dbHandler = new DatabaseHandler();
+        $g = new Game($dbHandler);
+        ob_end_flush();
     }
 }

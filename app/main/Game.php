@@ -16,13 +16,14 @@ class Game {
     public $player;
     public $hand;
     public $lastMoveId;
+    public $moveCount;
 
 
     public function __construct($databaseHandler) {
 
         $this->databaseHandler = $databaseHandler;
         
-        if (!isset($_SESSION['game_id']) || !isset($_SESSION['board']) || !isset($_SESSION['hand']) || !isset($_SESSION['player'])) {
+        if (!isset($_SESSION['game_id']) || !isset($_SESSION['board']) || !isset($_SESSION['hand']) || !isset($_SESSION['player']) || !isset($_SESSION['move_count'])) {
 
             //var_dump($_SESSION['board']);
           //  die();
@@ -31,6 +32,7 @@ class Game {
 
         $this->gameId = $_SESSION['game_id'];
         //var_dump($_SESSION['board']);
+        $this->moveCount = $_SESSION['move_count'];
         $this->board = $_SESSION['board'];
         $this->player = $_SESSION['player'];
         $this->hand = $_SESSION['hand'];
@@ -75,7 +77,7 @@ class Game {
         $this->hand[$this->player][$piece]--;
         $this->swapPlayer();
         
-
+        $this->moveCount += 1;
         $_SESSION['last_move'] = $db->insert_id;
         $this->reload();
     }
@@ -96,6 +98,12 @@ class Game {
                 $newPosition = ($position[0] + $offset[0]).','.($position[1] + $offset[1]);
                 // Check if the position is already occupied
                 if (isset($this->board[$newPosition])) {
+                    continue;
+                }
+
+                // If the neighbour is another color, you can't add.
+                if(count($this->board) > 1 && array_sum($this->hand) < 11 && !$this->neighboursAreSameColor($this->player, $newPosition, $this->board)) {
+                    //dd(array($player, $a, $board));
                     continue;
                 }
 
@@ -133,6 +141,33 @@ class Game {
         return $possiblePositions;
     }
 
+    public function isNeighbour($a, $b)
+    {
+        $a = explode(',', $a);
+        $b = explode(',', $b);
+        if ($a[0] == $b[0] && abs($a[1] - $b[1]) == 1) return true;
+        if ($a[1] == $b[1] && abs($a[0] - $b[0]) == 1) return true;
+        if ($a[0] + $a[1] == $b[0] + $b[1]) return true;
+        return false;
+    }
+
+    public function hasNeighbour($a)
+    {
+        foreach (array_keys($this->board) as $b) {
+            if ($this->isNeighbour($a, $b)) return true;
+        }
+    }
+
+    public function neighboursAreSameColor($player, $a): bool
+    {
+        foreach ($this->board as $b => $st) {
+            if (!$st) continue;
+            $c = $st[count($st) - 1][0];
+            if ($c != $player && $this->isNeighbour($a, $b)) return false;
+        }
+        return true;
+    }
+
     public function swapPlayer() {
         $this->player = 1 - $this->player;
     }
@@ -144,6 +179,7 @@ class Game {
         ];
         $this->player = 0;
         $this->lastMoveId = -1;
+        $this->moveCount = 0;
 
         $this->gameId = $this->databaseHandler->reset();
 
@@ -157,6 +193,7 @@ class Game {
         $_SESSION['player'] = $this->player;
         $_SESSION['hand'] = $this->hand;
         $_SESSION['last_move'] = $this->lastMoveId;
+        $_SESSION['move_count'] = $this->moveCount;
 
         header('Location: index.php');
     }

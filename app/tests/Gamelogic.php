@@ -29,10 +29,12 @@ final class Gamelogic extends TestCase {
         $g->addPiece('Q', '0,1');
 
         $this->assertEquals($g->getPossibleAddPositions(), ['0,-1', '-1,0', '1,-1']);
+        $this->assertEquals($g->getPossibleMovePositions(), []);
         
         $g->addPiece('B', '-1,0');
 
         $this->assertEquals($g->getPossibleAddPositions(), ['0,2', '1,1', '-1,2']);
+        $this->assertEquals($g->getPossibleMovePositions(), []);
     }
 
     protected function setUp(): void{

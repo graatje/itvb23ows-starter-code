@@ -15,11 +15,11 @@ class DatabaseHandler {
         return $db->insert_id;
     }
 
-    public function movePiece($gameId, $fromPosition, $toPosition, $lastMoveId, $stateString) {
+    public function movePiece($gameId, $fromPosition, $toPosition, $game, $lastMoveId) {
         $db = $this->getConn();
 
         $query = $db->prepare('insert into moves (game_id, type, move_from, move_to, previous_id, state) values (?, "move", ?, ?, ?, ?)');
-        $query->bind_param('issis', $gameId, $fromPosition, $toPosition, $lastMoveId, $serializedState);
+        $query->bind_param('issis', $gameId, $fromPosition, $toPosition, $lastMoveId, $game->serialize());
         $query->execute();
 
         return $db->insert_id;

@@ -77,15 +77,74 @@ class Game {
         $this->hand[$this->player][$piece]--;
         $this->swapPlayer();
 
-        $db = $this->databaseHandler->addPiece($this->gameId, $piece, $position, $this, $this->lastMoveId);
+        $insert_id = $this->databaseHandler->addPiece($this->gameId, $piece, $position, $this, $this->lastMoveId);
 
         $this->moveCount += 1;
-        $_SESSION['last_move'] = $db->insert_id;
+        $_SESSION['last_move'] = $insert_id;
         $this->reload();
     }
 
     public function movePiece($fromPosition, $toPosition) {
-
+        if ($this->hand['Q']) {
+            $_SESSION['error'] = "Queen bee is not played";
+        }
+        else {
+            $tile = array_pop($this->board[$fromPosition]);
+            if (!$this->hasNeighBour($toPosition))
+                $_SESSION['error'] = "Move would split hive";
+            else {
+                $all = array_keys($this->board);
+                $queue = [array_shift($all)];
+                while ($queue) {
+                    $next = explode(',', array_shift($queue));
+                    foreach ($GLOBALS['OFFSETS'] as $pq) {
+                        list($p, $q) = $pq;
+                        $p += $next[0];
+                        $q += $next[1];
+                        if (in_array("$p,$q", $all)) {
+                            $queue[] = "$p,$q";
+                            $all = array_diff($all, ["$p,$q"]);
+                        }
+                    }
+                }
+                if ($all) {
+                    $_SESSION['error'] = "Move would split hive";
+                } else {
+                    if ($fromPosition == $toPosition) {
+                        $_SESSION['error'] = 'Tile must move';
+                    }
+                    elseif (isset($this->board[$toPosition]) && $tile[1] != "B") {
+                        $_SESSION['error'] = 'Tile not empty';
+                    }
+                    elseif ($tile[1] == "Q" || $tile[1] == "B") {
+                        // @todo
+                        if (!$this->slide($fromPosition, $toPosition)) {
+                            $_SESSION['error'] = 'Tile must slide';
+                        }
+                    }
+                }
+            }
+            if (isset($_SESSION['error'])) {
+                if (isset($this->board[$fromPosition])) {
+                    array_push($this->board[$fromPosition], $tile);
+                }
+                else {
+                    $this->board[$fromPosition] = [$tile];
+                }
+            } else {
+                if (isset($board[$toPosition])) {
+                    array_push($this->board[$toPosition], $tile);
+                }
+                else {
+                    $this->board[$toPosition] = [$tile];
+                }
+                $this->swapPlayer();
+                $this->moveCount += 1;
+                $insert_id = $this->databaseHandler->movePiece($this->gameId, $fromPosition, $toPosition, $this, $this->lastMoveId);
+                $_SESSION['last_move'] = $insert_id;
+            }
+        }
+        $this->reload();
     }
 
     public function getPossibleAddPositions() {
@@ -168,6 +227,24 @@ class Game {
             if ($c != $player && $this->isNeighbour($a, $b)) return false;
         }
         return true;
+    }
+
+    public function slide($from, $to) {
+        if (!$this->hasNeighBour($to)) return false;
+        if (!$this->isNeighbour($from, $to)) return false;
+        $b = explode(',', $to);
+        $common = [];
+        foreach ($GLOBALS['OFFSETS'] as $pq) {
+            $p = $b[0] + $pq[0];
+            $q = $b[1] + $pq[1];
+            if ($this->isNeighbour($from, $p.",".$q)) $common[] = $p.",".$q;
+        }
+        if (!$this->board[$common[0]] && !$this->board[$common[1]] && !$this->board[$from] && !$this->board[$to]) return false;
+        return min($this->len($this->board[$common[0]]), $this->len($this->board[$common[1]])) <= max($this->len($this->board[$from]), $this->len($this->board[$to]));
+    }
+
+    function len($tile) {
+        return $tile ? count($tile) : 0;
     }
 
     public function swapPlayer() {
